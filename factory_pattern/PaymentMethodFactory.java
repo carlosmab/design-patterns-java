@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import strategy_pattern.CreditCard;
+import strategy_pattern.PayPal;
+import strategy_pattern.PaymentMethod;
+
 public class PaymentMethodFactory {
   
   private Map<String, Supplier<PaymentMethod>> paymentMethodMap = new HashMap<>();

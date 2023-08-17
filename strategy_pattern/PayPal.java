@@ -1,4 +1,4 @@
-package factory_pattern;
+package strategy_pattern;
 
 public class PayPal implements PaymentMethod {
   @Override

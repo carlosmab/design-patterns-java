@@ -1,6 +1,6 @@
 package observer_pattern;
 
-import factory_pattern.PaymentMethod;
+import strategy_pattern.PaymentMethod;
 
 public class Purchase {
   private String product;
