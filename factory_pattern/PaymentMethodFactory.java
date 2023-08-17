@@ -1,14 +1,23 @@
 package factory_pattern;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Supplier;
+
 public class PaymentMethodFactory {
   
-  public PaymentMethod getPaymentMethod(String type) {
-    if (type.equals("paypal")) {
-      return new PayPal();
-    } else if (type.equals("creditCard")) {
-      return new CreditCard();
-    } else {
+  private Map<String, Supplier<PaymentMethod>> paymentMethodMap = new HashMap<>();
+
+  public PaymentMethodFactory() {
+    paymentMethodMap.put("paypal", PayPal::new);
+    paymentMethodMap.put("creditCard", CreditCard::new);
+}
+public PaymentMethod getPaymentMethod(String type) {
+  Supplier<PaymentMethod> paymentMethodConstructor = paymentMethodMap.get(type);
+  if (paymentMethodConstructor != null) {
+      return paymentMethodConstructor.get();
+  } else {
       throw new IllegalArgumentException("Invalid payment method type");
-    }
   }
+}
 }

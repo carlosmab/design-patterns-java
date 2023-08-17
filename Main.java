@@ -1,10 +1,10 @@
 import factory_pattern.PaymentMethod;
 import factory_pattern.PaymentMethodFactory;
-import factory_pattern.PurchaseProcessor;
 import observer_pattern.EmailSender;
 import observer_pattern.InventoryUpdater;
 import observer_pattern.InvoiceGenerator;
 import observer_pattern.Purchase;
+import observer_pattern.PurchaseProcessor;
 
 class Main {
   public static void main(String[] args) {

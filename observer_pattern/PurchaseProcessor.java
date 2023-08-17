@@ -1,10 +1,7 @@
-package factory_pattern;
+package observer_pattern;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import observer_pattern.Purchase;
-import observer_pattern.PurchaseObserver;
 
 public class PurchaseProcessor {
   private List<PurchaseObserver> observers = new ArrayList<PurchaseObserver>();
